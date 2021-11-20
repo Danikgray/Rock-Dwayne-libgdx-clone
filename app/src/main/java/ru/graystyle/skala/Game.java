@@ -18,6 +18,8 @@ public class Game extends ApplicationAdapter {
     public Rectangle shop;
     public Sound skalaS;
 
+    private boolean playing;
+
     @Override
     public void create() {
       batch = new SpriteBatch();
@@ -38,9 +40,14 @@ public class Game extends ApplicationAdapter {
         batch.setProjectionMatrix(cam.combined);
         batch.begin();
         if(!Gdx.input.isTouched()){
+            playing = false;
         batch.draw(skala1,0,0,Gdx.graphics.getWidth(),Gdx.graphics.getHeight());}
         else {
+            if(!playing){
+                playing = true;
             skalaS.play();
+               }
+               
             batch.draw(skala2,0,0,Gdx.graphics.getWidth(),Gdx.graphics.getHeight());
         }
        // batch.draw(shopSpr,shop.x,shop.y);
