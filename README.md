@@ -1,4 +1,4 @@
-# Rock-Dwayne-libgdx-cl
+# Rock-Dwayne-libgdx-clone
 Clone of the most popular game in the play market
 
 > bruh
